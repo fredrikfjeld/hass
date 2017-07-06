@@ -1,6 +1,17 @@
 # Home Assistant
 
-My docker-compose.yml
+This is a fork of https://github.com/taskinen/home-assistant which in turn is a fork of https://github.com/home-assistant/home-assistant.
+
+Official documentation can be found there.
+
+## New features
+
+This image builds upon the Telldus Tellstick support added by [taskinen](https://github.com/taskinen) with added support for Z-Wave.
+
+## docker-compose
+
+This is my docker-compose.yml. You should curstomize it to fit your needs. Specifically the paths to devices and config files should probably be changed.
+
 ``` yaml
 version: '2'
 services:
