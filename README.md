@@ -7,6 +7,7 @@ Official documentation can be found there.
 ## New features
 
 This image builds upon the Telldus Tellstick support added by [taskinen](https://github.com/taskinen) with added support for Z-Wave.
+It also adds support for IKEA Trådfri.
 
 ## docker-compose
 

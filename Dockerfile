@@ -3,3 +3,9 @@ MAINTAINER Fredrik Fjeld <fredrik@fjeld.io>
 
 # Install dependencies for the new Z-Wave update required since 0.45
 RUN apt-get install -y libudev-dev
+
+# Install dependencies for IKEA Trådfri
+RUN apt-get update
+RUN apt-get install -y libtool autoconf git-core
+RUN git clone --depth 1 --recursive -b dtls https://github.com/home-assistant/libcoap.git
+RUN cd libcoap && ./autogen.sh && ./configure --disable-documentation --disable-shared --without-debug CFLAGS="-D COAP_DEBUG_FD=stderr" && make && make install
