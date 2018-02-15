@@ -9,3 +9,6 @@ RUN apt-get update
 RUN apt-get install -y libtool autoconf git-core
 RUN git clone --depth 1 --recursive -b dtls https://github.com/home-assistant/libcoap.git
 RUN cd libcoap && ./autogen.sh && ./configure --disable-documentation --disable-shared --without-debug CFLAGS="-D COAP_DEBUG_FD=stderr" && make && make install
+
+# Install dependencies for Apple TV
+RUN apt-get install -y build-essential libssl-dev libffi-dev python-dev python3-setuptools python3-dev
