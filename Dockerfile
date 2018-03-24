@@ -14,5 +14,5 @@ RUN cd libcoap && ./autogen.sh && ./configure --disable-documentation --disable-
 RUN apt-get install -y build-essential libssl-dev libffi-dev python-dev python3-setuptools python3-dev
 
 # Install dependencies for Bluetooth LE
-RUN at-get install python3-pip libglib2.0-dev
+RUN apt-get install python3-pip libglib2.0-dev
 RUN pip3 install bluepy
