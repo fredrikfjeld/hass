@@ -35,6 +35,9 @@ RUN apt-get install -y build-essential libssl-dev libffi-dev python-dev python3-
 # Install dependencies for Apple Homekit
 RUN apt-get install -y libavahi-compat-libdnssd-dev
 
+# Install dependencies for ffmpeg
+RUN apt-get install -y ffmpeg
+
 # Install dependencies for Bluetooth LE
 RUN apt-get install -y python3-pip libglib2.0-dev
 RUN pip3 install bluepy
